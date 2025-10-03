@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <meta charset="utf-8" />
+  <title>Demo Login</title>
+  <style>
+    body {
+      font-family: system-ui;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: #f6f7fb;
+    }
+    .card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+    input,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+    }
+    button {
+      background: #2563eb;
+      color: #fff;
+      font-weight: 600;
+      border: 0;
+      cursor: pointer;
+    }
+    #msg {
+      color: #ef4444;
+      min-height: 20px;
+      font-size: 14px;
+    }
+    #logout {
+      display: none;
+      margin-top: 8px;
+      color: #16a34a;
+      font-weight: 600;
+    }
+  </style>
+  <div class="card">
+    <h3>Вход</h3>
+    <input id="username" placeholder="Логин" />
+    <input id="password" type="password" placeholder="Пароль" />
+    <button id="login-btn">Войти</button>
+    <div id="msg"></div>
+    <div id="logout">Logout</div>
+  </div>
+  <script>
+    const U = "123",
+      P = "123";
+    login_btn.onclick = () => {
+      if (username.value === U && password.value === P) {
+        msg.textContent = "Добро пожаловать, " + U;
+        logout.style.display = "block";
+      } else {
+        msg.textContent = "Неверный логин или пароль";
+        logout.style.display = "none";
+      }
+    };
+  </script>
+</html>
